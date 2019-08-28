@@ -52,7 +52,7 @@ export class OracleItem extends React.Component<{oracle: any; expandedAddress: s
 
   render() {
     const expanded = this.expanded;
-    const className = `${expanded ? 'expanded' : ''} ${style['oracle-item']}`;
+    const className = `${expanded ? style['oracle-item'] : ''} ${style['oracle-item']}`;
     const {oracle, withBroker} = this.props;
     const length = oracle.endpoints.length;
     const maxHeight = expanded ? (length * 200 + 200) + 'px' : 0;
