@@ -1,0 +1,91 @@
+.oracle-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.endpoint-item {
+  position: relative;
+  padding: 5px 0;
+}
+
+.endpoint-name {
+  display: block;
+  color: black;
+  text-decoration: underline;
+}
+
+.endpoint-dots {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+
+.endpoint-values {
+  position: absolute;
+  color: black;
+  /* top: 2rem; */
+  left: .5rem;
+  font-size: 10px;
+  opacity: .7;
+}
+
+.endpoint-item .curve-chart {
+  margin: 0;
+}
+
+.endpoint-info {
+  word-break: break-word;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.endpoints-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding-right: 20px;
+  color: black;
+  text-decoration: underline;
+}
+.endpoints-count::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-image: url(./fold-arrow.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform .3s ease;
+  transform: rotate(0);
+}
+.expanded .endpoints-count::after {
+  transform: rotate(180deg);
+}
+
+.oracles-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group {
+  flex: auto;
+  width: 100%;
+  margin-right: 10px;
+}
+.form-group input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.label {
+  min-width: 90px;
+}

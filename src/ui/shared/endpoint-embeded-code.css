@@ -1,0 +1,19 @@
+.oracle-embeded-code {
+  position: relative;
+}
+
+.oracle-embeded-code textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  width: 100%;
+  min-height: 80px;
+}
+
+.oracle-embeded-code a {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  opacity: .8;
+  background-image: url(./copy-icon-green.svg);
+}
