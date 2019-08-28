@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
-    "target": "es6",
+    "module": "commonjs",
+    "target": "esnext",
     "declaration": true,
     "allowJs": false,
     "sourceMap": false,
@@ -11,6 +10,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "typeRoots": [
       "node_modules/@types"
