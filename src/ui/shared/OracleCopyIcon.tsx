@@ -23,7 +23,7 @@ export class OracleCopyIcon extends React.PureComponent<{address: string}, {copy
     });
   }
   render() {
-    const className = (this.state.copy === 2 ? 'copied ' : '') + style['oracle-address-copy'];
+    const className = (this.state.copy === 2 ? style['copied'] : '') + ' ' + style['oracle-address-copy'];
     return (
       <a className={className} href="#" title={this.props.address} onClick={this.handleCopy}>
         {this.state.copy === 1 && <textarea ref={this.textareaRef} defaultValue={this.props.address}></textarea>}

@@ -2,10 +2,20 @@ import * as React from 'react';
 import { OracleInfo } from './OracleInfo';
 import { EndpointsList } from './EndpointsList';
 import { parseHash } from '../../shared/pagination/utils';
-import { ViewsEnum } from '../../shared/views.enum';
 const style = require('./oracles.css');
 
-export class OracleItem extends React.Component<{oracle: any; expandedAddress: string; withBroker: boolean}, {expanded: boolean}> {
+interface Props {
+  oracle: any;
+  expandedAddress: string;
+  baseUrl: string;
+  onEndpointClick: (endpoinst: any) => void;
+}
+
+interface State {
+  expanded: boolean;
+}
+
+export class OracleItem extends React.Component<Props, State> {
 
   state = {expanded: false}
   ref = React.createRef<HTMLDivElement>();
@@ -53,19 +63,23 @@ export class OracleItem extends React.Component<{oracle: any; expandedAddress: s
   render() {
     const expanded = this.expanded;
     const className = `${expanded ? style['oracle-item'] : ''} ${style['oracle-item']}`;
-    const {oracle, withBroker} = this.props;
+    const {oracle, baseUrl, onEndpointClick} = this.props;
     const length = oracle.endpoints.length;
     const maxHeight = expanded ? (length * 200 + 200) + 'px' : 0;
     const endpointsText = (length === 1 ? 'Endpoint: ' : 'Endpoints: ') + length;
     const hash = parseHash();
-    const link = `#${withBroker ? ViewsEnum.TOKEN_PROVIDERS_LIST : ViewsEnum.ORACLES};search=${hash.search};page=${hash.page};bonded=${hash.bonded ? 'true' : ''};oracle=` + (expanded ? '' : oracle.address);
-    // const link = `#' + ViewsEnum.ORACLES + (expanded ? '' : ';' + oracle.address);
+    const link = `${baseUrl};search=${hash.search};page=${hash.page};bonded=${hash.bonded ? 'true' : ''};oracle=` + (expanded ? '' : oracle.address);
     return (
       <div ref={this.ref} className={className}>
         <OracleInfo address={oracle.address} title={oracle.title}></OracleInfo>
         {length > 0 && <a href={link} className={`${style["endpoints-count"]} to-white`}>{endpointsText}</a>}
         {length > 0 && <div style={{maxHeight, overflow: 'hidden', transition: `max-height ${this.animate}ms ease`}}>
-          {this.state.expanded && <EndpointsList withBroker={withBroker} endpoints={oracle.endpoints}></EndpointsList>}
+          {this.state.expanded &&
+            <EndpointsList
+              baseUrl={baseUrl}
+              onEndpointClick={onEndpointClick}
+              endpoints={oracle.endpoints} />
+          }
         </div>}
       </div>
     );

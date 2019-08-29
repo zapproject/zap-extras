@@ -3,17 +3,23 @@ import { CurveChart } from '../../shared/CurveChart';
 import { EndpointEmbededCode } from '../../shared/EndpointEmbededCode';
 import { Curve } from '@zapjs/curve/lib/src';
 import { parseHash } from '../../shared/pagination/utils';
-import { ViewsEnum } from '../../shared/views.enum';
 const style = require('./oracles.css');
 
-export const EndpointItem = React.memo((props: {endpoint: any; withBroker: boolean}) => {
-  const { endpoint, withBroker } = props;
+interface Props {
+  endpoint: any;
+  baseUrl: string;
+  onEndpointClick: (endpoinst: any) => void;
+}
+
+export const EndpointItem = React.memo((props: Props) => {
+  const { endpoint, baseUrl, onEndpointClick } = props;
   const hash = parseHash();
-  const link = `#${withBroker ? ViewsEnum.TOKEN_PROVIDERS_LIST : ViewsEnum.ORACLES};search=${hash.search};page=${hash.page};bonded=${hash.bonded ? 'true' : ''};oracle=`
+  const link = `${baseUrl};search=${hash.search};page=${hash.page};bonded=${hash.bonded ? 'true' : ''};oracle=`
     + endpoint.provider + endpoint.name;
   const equation = !!endpoint.curve ? Curve.curveToString(endpoint.curve.values) : '';
   const navigeteToEndpointInfo = () => {setTimeout(() => {
-    location.href = '#' + (withBroker ? ViewsEnum.TOKEN_BONDAGE : ViewsEnum.GET_ENDPOINT) + ';' + endpoint.provider + endpoint.name;
+    onEndpointClick(endpoint);
+    // location.href = '#' + (withBroker ? ViewsEnum.TOKEN_BONDAGE : ViewsEnum.GET_ENDPOINT) + ';' + endpoint.provider + endpoint.name;
   }, 50)};
 
   const [showEmbed, setShowEmbed] = React.useState(false);

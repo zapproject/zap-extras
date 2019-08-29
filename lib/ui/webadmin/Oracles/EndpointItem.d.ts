@@ -1,5 +1,8 @@
 import * as React from 'react';
-export declare const EndpointItem: React.MemoExoticComponent<(props: {
+interface Props {
     endpoint: any;
-    withBroker: boolean;
-}) => JSX.Element>;
+    baseUrl: string;
+    onEndpointClick: (endpoinst: any) => void;
+}
+export declare const EndpointItem: React.MemoExoticComponent<(props: Props) => JSX.Element>;
+export {};

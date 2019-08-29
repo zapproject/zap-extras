@@ -1,0 +1,56 @@
+.menu a {
+  display: block;
+  padding: .5rem 0;
+  margin: 4px;
+}
+
+.menu a {
+  border-radius: 10px;
+  line-height: 40px;
+  padding: 0 10px;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.menu a.active {
+  /*box-shadow: 0px 1px 0px 0px black;*/
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.menu__foldable > .menu__foldable-items {
+  display: none;
+}
+
+.menu__foldable.expanded > .menu__foldable-items {
+  display: block;
+}
+
+.menu__foldable-items {
+  padding-left: 30px;
+}
+
+.menu__foldable-title {
+  position: relative;
+}
+
+.menu__foldable-title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 10px;
+  height: 100%;
+  background-image: url(./fold-arrow.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform .3s ease;
+  transform: rotate(0);
+}
+
+.expanded .menu__foldable-title::after {
+  transform: rotate(180deg);
+}

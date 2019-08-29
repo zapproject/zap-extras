@@ -1,11 +1,19 @@
 import * as React from 'react';
 import { OracleItem } from './OracleItem';
 
-export const OraclesList = React.memo((props: {oracles: any[]; expandedAddress: any; withBroker: boolean}) => (
+interface Props {
+  oracles: any[];
+  expandedAddress: any;
+  baseUrl: string;
+  onEndpointClick: (endpoinst: any) => void;
+}
+
+export const OraclesList = React.memo((props: Props) => (
   <div className="oracles-list">
     {props.oracles.map(oracle =>
       <OracleItem
-        withBroker={props.withBroker}
+        baseUrl={props.baseUrl}
+        onEndpointClick={props.onEndpointClick}
         expandedAddress={props.expandedAddress}
         key={oracle.address} oracle={oracle} />
     )}

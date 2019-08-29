@@ -1,5 +1,8 @@
 /// <reference types="react" />
-export declare const EndpointsList: (props: {
+interface Props {
     endpoints: any[];
-    withBroker: boolean;
-}) => JSX.Element;
+    baseUrl: string;
+    onEndpointClick: (endpoinst: any) => void;
+}
+export declare const EndpointsList: (props: Props) => JSX.Element;
+export {};

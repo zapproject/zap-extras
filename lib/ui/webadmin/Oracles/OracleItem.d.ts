@@ -1,11 +1,14 @@
 import * as React from 'react';
-export declare class OracleItem extends React.Component<{
+interface Props {
     oracle: any;
     expandedAddress: string;
-    withBroker: boolean;
-}, {
+    baseUrl: string;
+    onEndpointClick: (endpoinst: any) => void;
+}
+interface State {
     expanded: boolean;
-}> {
+}
+export declare class OracleItem extends React.Component<Props, State> {
     state: {
         expanded: boolean;
     };
@@ -17,3 +20,4 @@ export declare class OracleItem extends React.Component<{
     componentDidUpdate(prevProps: any): void;
     render(): JSX.Element;
 }
+export {};
