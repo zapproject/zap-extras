@@ -43,7 +43,7 @@ export declare class ProvidersService {
         }>;
         total: number;
     }>;
-    getProviders(start: number, withBroker: any, limit?: number): Promise<{
+    getProviders(start: number, withBroker: any, limit?: number, skipProvidersWithoutEndpoints?: boolean): Promise<{
         items: Array<{
             provider: ZapProvider;
             endpoints: string[];
@@ -51,7 +51,7 @@ export declare class ProvidersService {
         total: number;
     }>;
     private static getEndpointsByOracleAddress;
-    search(text: any, start: number, withBroker: any, limit?: number): Promise<{
+    search(text: any, start: number, withBroker: any, limit?: number, skipProvidersWithoutEndpoints?: boolean): Promise<{
         items: Array<{
             provider: ZapProvider;
             endpoints: string[];

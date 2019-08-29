@@ -234,7 +234,7 @@ export class ProvidersService {
   }
 
   // TODO: For backend service return provider address and provider title only instead of provider
-  async getProviders(start = 0, withBroker, limit?: number): Promise<{items: Array<{provider: ZapProvider, endpoints: string[]}>, total: number}> {
+  async getProviders(start = 0, withBroker, limit?: number, skipProvidersWithoutEndpoints = false): Promise<{items: Array<{provider: ZapProvider, endpoints: string[]}>, total: number}> {
     const [allProviders, allEndpoints, brokerEndpoints] = await Promise.all([
       this.allProviders,
       this.allEndpoints,
@@ -250,6 +250,7 @@ export class ProvidersService {
         endpoints.push(e.brokerEndpoints);
       }
       if (!withBroker && (e.nonBrokerEndpoints.length || (!e.nonBrokerEndpoints.length && !e.brokerEndpoints.length))) {
+        if (skipProvidersWithoutEndpoints && e.nonBrokerEndpoints.length === 0) return;
         providers.push(e.provider);
         endpoints.push(e.nonBrokerEndpoints);
       }
@@ -274,7 +275,7 @@ export class ProvidersService {
   }
 
   // TODO: For backend service return provider address and provider title only instead of provider
-  async search(text, start = 0, withBroker, limit?: number): Promise<{items: Array<{provider: ZapProvider, endpoints: string[]}>, total: number}> {
+  async search(text, start = 0, withBroker, limit?: number, skipProvidersWithoutEndpoints = false): Promise<{items: Array<{provider: ZapProvider, endpoints: string[]}>, total: number}> {
     if (!text.length) this.getProviders(start, withBroker, limit);
     await this.allProviders;
     const [allEndpoints, providers] = await Promise.all([
@@ -292,6 +293,7 @@ export class ProvidersService {
         && provider.title.toLocaleLowerCase().indexOf(text) === -1
         && provider.providerOwner.toLocaleLowerCase().indexOf(text) === -1
       ) return;
+      if (skipProvidersWithoutEndpoints && endpoints.length === 0) return;
       filteredOracles.push({
         provider,
         endpoints,
