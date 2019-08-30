@@ -45,7 +45,11 @@ export class CurveChart extends React.PureComponent<Props, State> {
         shadowRadius: 1,
       },
     );
-    this.chart.draw(this.props.curves, this.props.dotsIssued);
+    try {
+      this.chart.draw(this.props.curves, this.props.dotsIssued);
+    } catch (e) {
+      this.setState({error: e.message});
+    }
   }
 
   componentDidUpdate() {
