@@ -29,7 +29,7 @@ export class EndpointEmbededCode extends React.PureComponent<Props> {
   }
 
   render() {
-    return <div className={styleEmbedded["oracle-embeded-code"]}>
+    return <div className={styleEmbedded['root']}>
       <textarea ref={this.textareaRef} defaultValue={this.embedDev} readOnly={true}>
       </textarea>
       <a className={styleOracles["oracle-address-copy"]} title="Copy" onClick={e => this.handleCopy(e)}></a>

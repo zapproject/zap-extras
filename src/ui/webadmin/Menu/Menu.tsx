@@ -56,7 +56,7 @@ export class Menu extends React.PureComponent<Props, State> {
     const {view, items} = this.props;
     const expanded = this.state.expanded;
     return (
-      <div className={style['menu']}>
+      <div className={style['root']}>
         {items.map(item => {
           const active = item.name === view;
           return !item.items

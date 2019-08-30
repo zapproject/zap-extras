@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { CurveChart } from '../../shared/CurveChart';
 import { EndpointEmbededCode } from '../../shared/EndpointEmbededCode';
 import { Curve } from '@zapjs/curve/lib/src';
 import { parseHash } from '../../shared/pagination/utils';
+import { CurveChart } from '../../shared/curve-chart/CurveChart';
 const style = require('./oracles.css');
 
 interface Props {

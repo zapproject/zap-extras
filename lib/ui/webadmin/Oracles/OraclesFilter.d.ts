@@ -1,13 +1,15 @@
 import * as React from 'react';
-export declare class OraclesSearch extends React.PureComponent<{
-    bonded: any;
-    bondedChange: any;
+interface Props {
+    bonded?: any;
+    bondedChange?: any;
     defaultValue: string;
     onChange: (e: any) => void;
     disabled: boolean;
-}, {
+}
+interface State {
     value: string;
-}> {
+}
+export declare class OraclesSearch extends React.PureComponent<Props, State> {
     timeout: any;
     constructor(props: any);
     componentDidUpdate(prevProps: any): void;
@@ -15,3 +17,4 @@ export declare class OraclesSearch extends React.PureComponent<{
     emit(): void;
     render(): JSX.Element;
 }
+export {};

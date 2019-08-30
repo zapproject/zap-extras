@@ -12,11 +12,11 @@ interface Props {
 }
 
 export const ExpandedMenuItem = React.memo(({item, expanded, handleExpandClick, active}: Props) => (
-  <div className={`${style['menu__foldable']} ${(expanded ? style['expanded'] : '')}`}>
-    <a href='#' onClick={handleExpandClick} data-expand={item.name} className={style['menu__foldable-title']}>
+  <div className={`${style['foldable']} ${(expanded ? style['expanded'] : '')}`}>
+    <a href='#' onClick={handleExpandClick} data-expand={item.name} className={style['foldable-title']}>
       {item.title}
     </a>
-    <div className={style['menu__foldable-items']}>
+    <div className={style['foldable-items']}>
       {item.items.map(item => <SingleMenuItem key={item.name+item.title} item={item} active={item.name === active} />)}
     </div>
   </div>

@@ -2,7 +2,19 @@ import * as React from 'react';
 import { BondedCheckbox } from './BondedCheckbox';
 const style = require('./oracles.css');
 
-export class OraclesSearch extends React.PureComponent<{bonded: any, bondedChange: any, defaultValue: string, onChange: (e: any) => void, disabled: boolean}, {value: string}> {
+interface Props {
+  bonded?: any;
+  bondedChange?: any;
+  defaultValue: string;
+  onChange: (e: any) => void;
+  disabled: boolean
+}
+
+interface State {
+  value: string;
+}
+
+export class OraclesSearch extends React.PureComponent<Props, State> {
   timeout;
   constructor(props) {
     super(props);
@@ -37,7 +49,7 @@ export class OraclesSearch extends React.PureComponent<{bonded: any, bondedChang
         <div className={style["form-group"]}>
           <input onBlur={this.emit} placeholder="Search by address or name" type="text" {...props} />
         </div>
-        <BondedCheckbox bonded={this.props.bonded} change={this.props.bondedChange} />
+        {this.props.bondedChange != null && <BondedCheckbox bonded={this.props.bonded} change={this.props.bondedChange} />}
       </div>
     );
   }

@@ -1,8 +1,8 @@
-._oracle-embeded-code_1ejv0_1 {
+.zap-extras-endpoint-embeded-code-root {
   position: relative;
 }
 
-._oracle-embeded-code_1ejv0_1 textarea {
+.zap-extras-endpoint-embeded-code-root textarea {
   display: block;
   width: 100%;
   resize: none;
@@ -10,7 +10,7 @@
   min-height: 80px;
 }
 
-._oracle-embeded-code_1ejv0_1 a {
+.zap-extras-endpoint-embeded-code-root a {
   position: absolute;
   top: 5px;
   right: 15px;

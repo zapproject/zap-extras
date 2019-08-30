@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ViewItem } from "./Menu";
 
-const style = require('./menu');
+const style = require('./menu.css');
 
 export const SingleMenuItem = React.memo(({item, active}: {item: ViewItem; active: boolean}) => (
   !!item.exclude ? null :

@@ -1,4 +1,4 @@
-._oracle-item_bdlin_1 {
+.zap-extras-oracles-oracle-item {
   border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
@@ -6,18 +6,18 @@
   position: relative;
 }
 
-._endpoint-item_bdlin_9 {
+.zap-extras-oracles-endpoint-item {
   position: relative;
   padding: 5px 0;
 }
 
-._endpoint-name_bdlin_14 {
+.zap-extras-oracles-endpoint-name {
   display: block;
   color: black;
   text-decoration: underline;
 }
 
-._endpoint-dots_bdlin_20 {
+.zap-extras-oracles-endpoint-dots {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -25,7 +25,7 @@
   line-height: 1.5rem;
 }
 
-._endpoint-values_bdlin_28 {
+.zap-extras-oracles-endpoint-values {
   position: absolute;
   color: black;
   left: .5rem;
@@ -33,17 +33,17 @@
   opacity: .7;
 }
 
-._endpoint-item_bdlin_9 ._curve-chart_bdlin_36 {
+.zap-extras-oracles-endpoint-item .zap-extras-oracles-curve-chart {
   margin: 0;
 }
 
-._endpoint-info_bdlin_40 {
+.zap-extras-oracles-endpoint-info {
   word-break: break-word;
   overflow-y: hidden;
   text-overflow: ellipsis;
 }
 
-._endpoints-count_bdlin_46 {
+.zap-extras-oracles-endpoints-count {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -51,7 +51,7 @@
   color: black;
   text-decoration: underline;
 }
-._endpoints-count_bdlin_46::after {
+.zap-extras-oracles-endpoints-count::after {
   content: '';
   display: block;
   position: absolute;
@@ -66,25 +66,25 @@
   transition: transform .3s ease;
   transform: rotate(0);
 }
-._expanded_bdlin_69 ._endpoints-count_bdlin_46::after {
+.zap-extras-oracles-expanded .zap-extras-oracles-endpoints-count::after {
   transform: rotate(180deg);
 }
 
-._oracles-filter_bdlin_73 {
+.zap-extras-oracles-oracles-filter {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-._form-group_bdlin_79 {
+.zap-extras-oracles-form-group {
   flex: auto;
   width: 100%;
   margin-right: 10px;
 }
-._form-group_bdlin_79 input {
+.zap-extras-oracles-form-group input {
   width: 100%;
   margin-bottom: 20px;
 }
-._label_bdlin_88 {
+.zap-extras-oracles-label {
   min-width: 90px;
 }

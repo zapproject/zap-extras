@@ -1,8 +1,8 @@
-.oracle-embeded-code {
+.root {
   position: relative;
 }
 
-.oracle-embeded-code textarea {
+.root textarea {
   display: block;
   width: 100%;
   resize: none;
@@ -10,7 +10,7 @@
   min-height: 80px;
 }
 
-.oracle-embeded-code a {
+.root a {
   position: absolute;
   top: 5px;
   right: 15px;

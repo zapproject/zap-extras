@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Message } from './Message';
 import { CurveSvgLineChart } from 'zap-curve-chart/lib/CurveSvgLineChart';
+import { Message } from '../message/Message';
 
 interface Props {
   curves: number[];
