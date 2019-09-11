@@ -1,0 +1,39 @@
+.zap-extras-loading-loading-content {
+  display: block;
+}
+
+.zap-extras-loading-loading-indicator {
+  position: relative;
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 2px;
+  height: 4px;
+  overflow: hidden;
+}
+.zap-extras-loading-loading-indicator::before,
+.zap-extras-loading-loading-indicator::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background-color: #0980fe;
+  transform: translateX(-100%);
+}
+.zap-extras-loading-loading-indicator::before {
+  animation: zap-extras-loading-loading-indicator 2s ease 1s infinite;
+}
+.zap-extras-loading-loading-indicator::after {
+  animation: zap-extras-loading-loading-indicator 2s infinite;
+}
+
+@keyframes zap-extras-loading-loading-indicator {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(100%);
+  }
+}

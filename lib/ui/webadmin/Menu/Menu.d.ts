@@ -7,7 +7,6 @@ export interface ViewItem {
     name: string;
 }
 interface Props {
-    providerTitle: string;
     view: string;
     items: ViewItem[];
 }

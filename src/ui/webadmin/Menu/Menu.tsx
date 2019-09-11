@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ExpandedMenuItem } from './ExpandedMenuItem';
 import { SingleMenuItem } from './SingleMenuItem';
+import { MenuMobileSwitcher } from './MenuMobileSwitcher';
 
 const style = require('./menu.css');
 
@@ -13,7 +14,6 @@ export interface ViewItem {
 }
 
 interface Props {
-  providerTitle: string;
 	view: string;
 	items: ViewItem[],
 }
@@ -56,19 +56,22 @@ export class Menu extends React.PureComponent<Props, State> {
     const {view, items} = this.props;
     const expanded = this.state.expanded;
     return (
-      <div className={style['root']}>
-        {items.map(item => {
-          const active = item.name === view;
-          return !item.items
-            ? <SingleMenuItem key={item.name+item.title} item={item} active={active} />
-            : <ExpandedMenuItem
-                key={item.name+item.title}
-                item={item}
-                expanded={expanded === item.name}
-                active={view}
-                handleExpandClick={this.handleExpandClick} />
-        })}
-      </div>
+      <React.Fragment>
+        <MenuMobileSwitcher />
+        <aside className={style['root']}>
+          {items.map(item => {
+            const active = item.name === view;
+            return !item.items
+              ? <SingleMenuItem key={item.name+item.title} item={item} active={active} />
+              : <ExpandedMenuItem
+                  key={item.name+item.title}
+                  item={item}
+                  expanded={expanded === item.name}
+                  active={view}
+                  handleExpandClick={this.handleExpandClick} />
+          })}
+        </aside>
+      </React.Fragment>
     );
   }
 }

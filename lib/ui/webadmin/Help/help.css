@@ -1,0 +1,43 @@
+.zap-extras-help-help-icon {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background: white;
+  background: transparent;
+  background-image: url('info-dark.svg');
+  background-position: 50% 50%;
+  background-size: 22px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.zap-extras-help-help-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 5px 5px 5px #666;
+  display: none;
+  max-width: 300px;
+  word-break: break-word;
+  word-wrap: break-word;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #282c34;
+  border: 1px solid white;
+  color: white;
+}
+
+.zap-extras-help-help-icon:hover + .zap-extras-help-help-popup,
+.zap-extras-help-help-popup:hover {
+  display: block;
+}
+
+
+
+@media (max-width: 820px) {
+  .zap-extras-help-help-icon {
+    display: none;
+  }
+}

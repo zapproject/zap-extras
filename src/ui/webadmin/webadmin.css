@@ -1,0 +1,159 @@
+.root {
+	background: #282c34;
+	color: white;
+	box-sizing: border-box;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+	overflow-y: scroll;
+	line-height: 1.5;
+	padding: 5px;
+}
+
+@media (max-width: 820px) {
+	padding: 0;
+}
+
+.root * {
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	box-sizing: inherit;
+	line-height: inherit;
+}
+
+.root [hidden] {
+	display: none !important;
+}
+
+.root button, .root a {
+	cursor: pointer;
+}
+
+.root code {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 14px;
+}
+
+.root a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+.root a:hover {
+	color: #0056b3;
+}
+
+.root button {
+	border-radius: 10px;
+	line-height: 40px;
+	padding: 0 10px;
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+	background: transparent;
+}
+
+.root button:hover {
+	opacity: .8;
+}
+
+.root fieldset {
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.root select,
+.root input[type="number"],
+.root input[type="text"] {
+	background: transparent;
+	color: white;
+}
+
+.logo {
+	padding: 0 5px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.top-nav {
+	max-height: 40px;
+	display: block;
+	position: relative;
+	max-width: 800px;
+	margin: 10px auto;
+	padding: 0 0 0 40px;
+	position: relative;
+}
+
+.top-nav h1 {
+	font-size: 20px;
+}
+
+.header {
+	padding: 1rem;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-top: 10px;
+	position: relative;
+}
+
+.header img {
+	height: 20px;
+	width: 20px;
+}
+
+.main {
+	margin-top: 10px;
+	padding: 10px 10px 10px 10px;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+.logout {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	background-color: transparent;
+	background-image: url(./logout-dark.svg);
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -12.5px;
+	cursor: pointer;
+}
+
+.main-container {
+	display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  flex-direction: row;
+}
+
+.main-container > div,
+.main-container > span,
+.main-container > aside,
+.main-container > section,
+.main-container > main {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main-section {
+  width: 66.66666%;
+  max-width: 66.66666%;
+  position: relative;
+}
+
+@media (mex-width: 820px) {
+	.main-section {
+		width: auto;
+		max-width: 100%;
+	}
+}
