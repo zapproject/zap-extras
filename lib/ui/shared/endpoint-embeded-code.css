@@ -1,19 +1,2 @@
-.zap-extras-endpoint-embeded-code-root {
-  position: relative;
-}
-
-.zap-extras-endpoint-embeded-code-root textarea {
-  display: block;
-  width: 100%;
-  resize: none;
-  width: 100%;
-  min-height: 80px;
-}
-
-.zap-extras-endpoint-embeded-code-root a {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  opacity: .8;
-  background-image: url(copy-icon-green.svg);
-}
+.zap-extras-endpoint-embeded-code-root{position:relative}.zap-extras-endpoint-embeded-code-root textarea{display:block;resize:none;width:100%;min-height:80px}.zap-extras-endpoint-embeded-code-root a{position:absolute;top:5px;right:15px;opacity:.8;background-image:url(copy-icon-green.svg)}
+/*# sourceMappingURL=endpoint-embeded-code.css.map */

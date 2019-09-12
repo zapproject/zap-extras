@@ -1,6 +1,5 @@
 import * as React from 'react';
-import './help.css';
-const style = require("./help.css");
+const style = require('./help.css');
 
 export class Help extends React.PureComponent<{children: string}> {
   render() {
