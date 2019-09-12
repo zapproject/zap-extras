@@ -65,7 +65,7 @@ export class OracleItem extends React.Component<Props, State> {
     const className = `${expanded ? style['oracle-item'] : ''} ${style['oracle-item']}`;
     const {oracle, baseUrl, onEndpointClick} = this.props;
     const length = oracle.endpoints.length;
-    const maxHeight = expanded ? (length * 200 + 200) + 'px' : 0;
+    const maxHeight = expanded ? (length * 250 + 200) + 'px' : 0;
     const endpointsText = (length === 1 ? 'Endpoint: ' : 'Endpoints: ') + length;
     const hash = parseHash();
     const link = `${baseUrl};search=${hash.search};page=${hash.page};bonded=${hash.bonded ? 'true' : ''};oracle=` + (expanded ? '' : oracle.address);

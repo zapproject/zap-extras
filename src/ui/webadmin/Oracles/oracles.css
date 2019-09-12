@@ -13,7 +13,6 @@
 
 .endpoint-name {
   display: block;
-  color: black;
   text-decoration: underline;
 }
 
@@ -27,7 +26,6 @@
 
 .endpoint-values {
   position: absolute;
-  color: black;
   left: .5rem;
   font-size: 10px;
   opacity: .7;
@@ -48,7 +46,6 @@
   top: 5px;
   right: 5px;
   padding-right: 20px;
-  color: black;
   text-decoration: underline;
 }
 .endpoints-count::after {

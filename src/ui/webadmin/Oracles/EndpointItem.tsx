@@ -25,9 +25,9 @@ export const EndpointItem = React.memo((props: Props) => {
   const [showEmbed, setShowEmbed] = React.useState(false);
 
   return (
-    <div className={`${style['endpoint-item']} endpoint.name`}>
+    <div className={`${style['endpoint-item']}`}>
       <div className={style['endpoint-info']}>
-        <a onClick={navigeteToEndpointInfo} href={link} className={`${style['endpoint-name']} to-white`}>{endpoint.name}</a>
+        <a onClick={navigeteToEndpointInfo} href={link} className={`${style['endpoint-name']}`}>{endpoint.name}</a>
         <div>
           <a href="#" onClick={e => {e.preventDefault(); setShowEmbed(!showEmbed)}}>{showEmbed ? 'Hide embed' : 'Show embed'}</a>
           {showEmbed && <div className="endpoint-embed-wrapper">
@@ -38,7 +38,7 @@ export const EndpointItem = React.memo((props: Props) => {
           Dots issued: {endpoint.dotsIssued}
           {endpoint.dotsBounded && <div>Dots bonded: {endpoint.dotsBounded}</div>}
         </div>
-        <div className={`${style['endpoint-values']} to-white`}>{equation}</div>
+        <div className={`${style['endpoint-values']}`}>{equation}</div>
       </div>
 
       {!!endpoint.curve && <CurveChart curves={endpoint.curve.values} dotsIssued={endpoint.dotsIssued}></CurveChart>}
