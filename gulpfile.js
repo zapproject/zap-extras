@@ -20,13 +20,13 @@ gulp.task('css:shared-assets', () => {
 gulp.task('css:shared', () => {
   const plugins = [
     modulesPlugin,
-    autoprefixer(),
-    cssnano(),
+    // autoprefixer(),
+    // cssnano(),
   ];
   return gulp.src('src/ui/shared/**/*.css', {base: 'src/ui/shared'})
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(postcss(plugins))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('lib/ui/shared'))
 });
 
@@ -36,14 +36,14 @@ gulp.task('css:webadmin', () => {
     url({
 			url: 'copy',
     }),
-    autoprefixer(),
-    cssnano(),
+    // autoprefixer(),
+    // cssnano(),
   ];
   return gulp.src('src/ui/webadmin/**/*.css', {base: 'src/ui/webadmin'})
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(postcss(plugins, {to: 'lib/ui/webadmin/webadmin.css'}))
     .pipe(concat('webadmin.css'))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('lib/ui/webadmin'))
 });
 

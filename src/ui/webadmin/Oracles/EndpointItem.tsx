@@ -28,12 +28,14 @@ export const EndpointItem = React.memo((props: Props) => {
     <div className={`${style['endpoint-item']}`}>
       <div className={style['endpoint-info']}>
         <a onClick={navigeteToEndpointInfo} href={link} className={`${style['endpoint-name']}`}>{endpoint.name}</a>
-        <div>
-          <a href="#" onClick={e => {e.preventDefault(); setShowEmbed(!showEmbed)}}>{showEmbed ? 'Hide embed' : 'Show embed'}</a>
-          {showEmbed && <div className="endpoint-embed-wrapper">
-            <EndpointEmbededCode provider={endpoint.provider} endpoint={endpoint.name}></EndpointEmbededCode>
-          </div>}
-        </div>
+        <a type="button"
+          className={style['endpoint-embed-button']}
+          title={showEmbed ? 'Hide embed' : 'Show embed'}
+          onClick={e => {e.preventDefault(); setShowEmbed(!showEmbed)}}
+        ></a>
+        {showEmbed && <div className={style['endpoint-embed-wrapper']}>
+          <EndpointEmbededCode provider={endpoint.provider} endpoint={endpoint.name}></EndpointEmbededCode>
+        </div>}
         <div className={style['endpoint-dots']}>
           Dots issued: {endpoint.dotsIssued}
           {endpoint.dotsBounded && <div>Dots bonded: {endpoint.dotsBounded}</div>}

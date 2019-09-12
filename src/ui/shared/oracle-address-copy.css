@@ -30,7 +30,6 @@
   position: absolute;
   transform: translateX(-50%) translateY(-120%);
   background-color: rgba(0, 0, 0, .5);
-  color: black;
   font-size: 12px;
   padding: 3px 5px;
   border-radius: 2px;

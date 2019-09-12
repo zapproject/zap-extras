@@ -1,2 +1,21 @@
-.zap-extras-message-root{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem;word-break:break-word;word-wrap:break-word}.zap-extras-message-success{color:#155724;background-color:#d4edda;border-color:#c3e6cb}.zap-extras-message-error{color:#721c24;background-color:#f8d7da;border-color:#f5c6cb;word-break:break-all;word-wrap:anywhere}
-/*# sourceMappingURL=message.css.map */
+.zap-extras-message-root {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+.zap-extras-message-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.zap-extras-message-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  word-break: break-all;
+  word-wrap: anywhere;
+}
