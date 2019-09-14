@@ -14,7 +14,7 @@
 .endpoint-name {
   /* display: block; */
   text-decoration: underline;
-  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .endpoint-dots {
@@ -93,14 +93,18 @@
 }
 
 .endpoint-embed-button {
-  background: none;
-  border: 0 none;
-  width: 1rem;
-  height: 1rem;
   display: inline-block;
-  background-image: url(./embed.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-image: url(./embed.svg); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   background-size: 100%;
-  padding: 3px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+
+.endpoint-embed-button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
 }

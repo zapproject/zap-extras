@@ -17,7 +17,7 @@ interface State {
 
 export class OracleItem extends React.Component<Props, State> {
 
-  state = {expanded: false}
+  state = {expanded: this.expanded}
   ref = React.createRef<HTMLDivElement>();
 
   get animate() {

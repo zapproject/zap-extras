@@ -3,6 +3,7 @@ import { EndpointEmbededCode } from '../../shared/EndpointEmbededCode';
 import { Curve } from '@zapjs/curve/lib/src';
 import { parseHash } from '../../shared/pagination/utils';
 import { CurveChart } from '../../shared/curve-chart/CurveChart';
+import { EmbedIcon } from './EmbedIcon';
 const style = require('./oracles.css');
 
 interface Props {
@@ -32,7 +33,7 @@ export const EndpointItem = React.memo((props: Props) => {
           className={style['endpoint-embed-button']}
           title={showEmbed ? 'Hide embed' : 'Show embed'}
           onClick={e => {e.preventDefault(); setShowEmbed(!showEmbed)}}
-        ></a>
+        ><EmbedIcon style={{fill: showEmbed ? '#0056b3' : '#fff'}} /></a>
         {showEmbed && <div className={style['endpoint-embed-wrapper']}>
           <EndpointEmbededCode provider={endpoint.provider} endpoint={endpoint.name}></EndpointEmbededCode>
         </div>}
