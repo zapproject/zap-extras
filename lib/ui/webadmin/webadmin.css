@@ -200,113 +200,6 @@
     display: none;
   }
 }
-.zap-extras-oracles-oracle-item {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.zap-extras-oracles-endpoint-item {
-  position: relative;
-  padding: 5px 0;
-}
-
-.zap-extras-oracles-endpoint-name {
-  /* display: block; */
-  text-decoration: underline;
-  padding-left: 10px;
-}
-
-.zap-extras-oracles-endpoint-dots {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 12px;
-  line-height: 1.5rem;
-}
-
-.zap-extras-oracles-endpoint-values {
-  position: absolute;
-  left: .5rem;
-  font-size: 10px;
-  opacity: .7;
-}
-
-.zap-extras-oracles-endpoint-item .zap-extras-oracles-curve-chart {
-  margin: 0;
-}
-
-.zap-extras-oracles-endpoint-info {
-  word-break: break-word;
-  overflow-y: hidden;
-  text-overflow: ellipsis;
-}
-
-.zap-extras-oracles-endpoints-count {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  padding-right: 20px;
-  text-decoration: underline;
-}
-.zap-extras-oracles-endpoints-count::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10px;
-  height: 100%;
-  background-image: url(fold-arrow.svg);
-  background-position: 50% 50%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: transform .3s ease;
-  transform: rotate(0);
-}
-.zap-extras-oracles-expanded .zap-extras-oracles-endpoints-count::after {
-  transform: rotate(180deg);
-}
-
-.zap-extras-oracles-oracles-filter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.zap-extras-oracles-form-group {
-  flex: auto;
-  width: 100%;
-  margin-right: 10px;
-}
-.zap-extras-oracles-form-group input {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.zap-extras-oracles-label {
-  min-width: 90px;
-}
-
-
-.zap-extras-oracles-endpoint-embed-wrapper {
-
-}
-
-.zap-extras-oracles-endpoint-embed-button {
-  background: none;
-  border: 0 none;
-  width: 1rem;
-  height: 1rem;
-  display: inline-block;
-  background-image: url(embed.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 3px;
-}
-
 .zap-extras-menu-root {
   flex: auto
 }
@@ -458,4 +351,115 @@
     padding-top: 50px;
     z-index: 2;
   }
+}
+
+.zap-extras-oracles-oracle-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.zap-extras-oracles-endpoint-item {
+  position: relative;
+  padding: 5px 0;
+}
+
+.zap-extras-oracles-endpoint-name {
+  /* display: block; */
+  text-decoration: underline;
+  padding-right: 10px;
+}
+
+.zap-extras-oracles-endpoint-dots {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+
+.zap-extras-oracles-endpoint-values {
+  position: absolute;
+  left: .5rem;
+  font-size: 10px;
+  opacity: .7;
+}
+
+.zap-extras-oracles-endpoint-item .zap-extras-oracles-curve-chart {
+  margin: 0;
+}
+
+.zap-extras-oracles-endpoint-info {
+  word-break: break-word;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.zap-extras-oracles-endpoints-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding-right: 20px;
+  text-decoration: underline;
+}
+.zap-extras-oracles-endpoints-count::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-image: url(fold-arrow.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform .3s ease;
+  transform: rotate(0);
+}
+.zap-extras-oracles-expanded .zap-extras-oracles-endpoints-count::after {
+  transform: rotate(180deg);
+}
+
+.zap-extras-oracles-oracles-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.zap-extras-oracles-form-group {
+  flex: auto;
+  width: 100%;
+  margin-right: 10px;
+}
+.zap-extras-oracles-form-group input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.zap-extras-oracles-label {
+  min-width: 90px;
+}
+
+
+.zap-extras-oracles-endpoint-embed-wrapper {
+
+}
+
+.zap-extras-oracles-endpoint-embed-button {
+  display: inline-block;
+  /* background-image: url(./embed.svg); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  background-size: 100%;
+  padding: 0;
+  vertical-align: middle;
+}
+
+
+.zap-extras-oracles-endpoint-embed-button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
 }
