@@ -1,0 +1,17 @@
+.gas-price-select {
+	display: flex;
+}
+
+.gas-price-select > button {
+	flex: 1;
+	margin: 5px;
+	padding-top: 5px;
+}
+
+.gas-price div {
+	line-height: 1.5;
+}
+
+.gas-price-selected {
+	background-color: rgba(255, 255, 255, .1);
+}

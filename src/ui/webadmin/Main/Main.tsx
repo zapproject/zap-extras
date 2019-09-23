@@ -4,15 +4,15 @@ import { Menu } from '../Menu/Menu';
 const style = require('../webadmin.css');
 
 
-const Address = React.memo((props: {children: string}) => (
+const Address = (props: {children: string}) => (
   <div className="address">Address: {props.children}</div>
-));
+);
 
-const Provider = React.memo((props: {children: string}) => (
+const Provider = (props: {children: string}) => (
   <div>
     {props.children ? 'Found provider: ' + props.children : 'This account is currently not setup as a provider'}
   </div>
-));
+);
 
 interface Props {
   handleLogout: () => void;

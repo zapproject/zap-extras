@@ -1,5 +1,5 @@
-import * as React from 'react';
-export declare const OracleInfo: React.MemoExoticComponent<(props: {
+/// <reference types="react" />
+export declare const OracleInfo: (props: {
     title: string;
     address: string;
-}) => JSX.Element>;
+}) => JSX.Element;

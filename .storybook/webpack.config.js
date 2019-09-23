@@ -1,10 +1,9 @@
 const path = require('path');
 
 module.exports = ({ config }) => {
-	console.log('----- config.module.rules', config.module.rules);
 	config.module.rules = config.module.rules.filter(rule => String(rule.test) !== String(/\.css$/))
 	config.module.rules.push({
-		test: /\.tsx?$/,
+		test: /\.(ts|tsx)$/,
 		use: [
 			{
 				loader: require.resolve('ts-loader'),
@@ -14,6 +13,20 @@ module.exports = ({ config }) => {
 			},
 		],
 	},
+	{
+    test: /\.stories\.jsx?$/,
+    loaders: [
+      {
+        loader: require.resolve('@storybook/source-loader'),
+        options: {
+          prettierConfig: {
+            tabWidth: 2,
+          },
+        },
+      },
+    ],
+    enforce: 'pre',
+  },
 	{
 		test: /\.css$/,
 		loader: require.resolve('style-loader'),
@@ -29,7 +42,6 @@ module.exports = ({ config }) => {
 			},
 		},
 	});
-	console.log('=------- config.module.rules', config.module.rules);
 	config.resolve.extensions.push('.ts', '.tsx');
 	return config;
 }

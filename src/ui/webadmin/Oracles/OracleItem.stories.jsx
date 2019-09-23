@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { OracleItem } from './OracleItem';
 import { Curve } from '@zapjs/curve';
 
@@ -30,15 +29,11 @@ const oracle = {
 	endpoints,
 	title: 'Title',
 	address: '0x81e1361f6FaDdC5E0C6361601C7e598B7592A45f',
-}
+};
 
 const Webadmin = (props) => <div className={style.root}>{props.children}</div>;
 
-const Container = (props) => <div style={{
-	width: '500px',
-	// color: '#fff',
-	// backgroundColor: '#282c34',
-}}>{props.children}</div>;
+const Container = (props) => <div style={{width: '500px'}}>{props.children}</div>;
 
 stories.add('OracleItem', () =>
 	<Webadmin>
@@ -50,6 +45,5 @@ stories.add('OracleItem', () =>
 				onEndpointClick={() => {}}
 				/>
 		</Container>
-	</Webadmin>,
-	{ info: { inline: true } }
+	</Webadmin>
 );

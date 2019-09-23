@@ -1,4 +1,4 @@
-import * as React from 'react';
-export declare const Loading: React.MemoExoticComponent<(props: {
+/// <reference types="react" />
+export declare const Loading: (props: {
     children: any;
-}) => JSX.Element>;
+}) => JSX.Element;

@@ -1,9 +1,9 @@
-import * as React from 'react';
+/// <reference types="react" />
 interface Props {
     oracles: any[];
     expandedAddress: any;
     baseUrl: string;
     onEndpointClick: (endpoinst: any) => void;
 }
-export declare const OraclesList: React.MemoExoticComponent<(props: Props) => JSX.Element>;
+export declare const OraclesList: (props: Props) => JSX.Element;
 export {};

@@ -1,5 +1,5 @@
-import * as React from 'react';
-export declare const Message: React.MemoExoticComponent<(props: {
+/// <reference types="react" />
+export declare const Message: (props: {
     children: any;
-    type: "error" | "success";
-}) => JSX.Element>;
+    type?: "error" | "success";
+}) => JSX.Element;

@@ -14,7 +14,7 @@
     "build:css": "gulp build",
     "build:no-types": "run-p build:js build:css",
     "build": "run-p build:types build:js build:css",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
     "react": "^16.8.6",
@@ -39,7 +39,11 @@
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/preset-typescript": "^7.6.0",
     "@storybook/addon-info": "^5.2.0",
+    "@storybook/addon-knobs": "^5.2.0",
+    "@storybook/addon-storysource": "^5.2.0",
+    "@storybook/addon-viewport": "^5.2.0",
     "@storybook/react": "^5.2.0",
+    "@storybook/source-loader": "^5.2.0",
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
     "@types/storybook__react": "^4.0.2",
@@ -66,7 +70,7 @@
     "postcss-modules": "^1.4.1",
     "postcss-url": "^8.0.0",
     "react": "^16.8.6",
-    "react-docgen-typescript-loader": "^3.2.0",
+    "react-docgen-typescript-loader": "^3.2.1",
     "react-dom": "^16.8.6",
     "rimraf": "^3.0.0",
     "ts-loader": "^6.1.0",

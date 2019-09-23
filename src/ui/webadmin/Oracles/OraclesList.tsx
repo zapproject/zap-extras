@@ -8,7 +8,7 @@ interface Props {
   onEndpointClick: (endpoinst: any) => void;
 }
 
-export const OraclesList = React.memo((props: Props) => (
+export const OraclesList = (props: Props) => (
   <div className="oracles-list">
     {props.oracles.map(oracle =>
       <OracleItem
@@ -18,4 +18,4 @@ export const OraclesList = React.memo((props: Props) => (
         key={oracle.address} oracle={oracle} />
     )}
   </div>
-));
+);

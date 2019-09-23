@@ -15,9 +15,9 @@
   display: block;
   height: 30px;
   width: 30px;
+  line-height: 30px;
   background-color: transparent;
-  line-height: 16px;
-  padding: 7px 0;
+  padding: 0;
   text-decoration: none;
   color: #fff;
   border: 1px solid #fff;

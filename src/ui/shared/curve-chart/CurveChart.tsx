@@ -11,7 +11,6 @@ interface Props {
 
 interface State {
   error: string;
-
 }
 
 export class CurveChart extends React.PureComponent<Props, State> {
@@ -53,6 +52,7 @@ export class CurveChart extends React.PureComponent<Props, State> {
   }
 
   componentDidUpdate() {
+    console.log('did update', this.props.curves);
     try {
       this.chart.draw(this.props.curves, this.props.dotsIssued);
     } catch (e) {

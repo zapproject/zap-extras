@@ -11,7 +11,7 @@ interface Props {
   handleExpandClick: (e: any) => void;
 }
 
-export const ExpandedMenuItem = React.memo(({item, expanded, handleExpandClick, active}: Props) => (
+export const ExpandedMenuItem = ({item, expanded, handleExpandClick, active}: Props) => (
   <div className={`${style['foldable']} ${(expanded ? style['expanded'] : '')}`}>
     <a href='#' onClick={handleExpandClick} data-expand={item.name} className={style['foldable-title']}>
       {item.title}
@@ -20,4 +20,4 @@ export const ExpandedMenuItem = React.memo(({item, expanded, handleExpandClick, 
       {item.items.map(item => <SingleMenuItem key={item.name+item.title} item={item} active={item.name === active} />)}
     </div>
   </div>
-));
+);

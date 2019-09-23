@@ -1,4 +1,4 @@
-import * as React from 'react';
+/// <reference types="react" />
 import { ViewItem } from './Menu';
 interface Props {
     item: ViewItem;
@@ -6,5 +6,5 @@ interface Props {
     active: string;
     handleExpandClick: (e: any) => void;
 }
-export declare const ExpandedMenuItem: React.MemoExoticComponent<({ item, expanded, handleExpandClick, active }: Props) => JSX.Element>;
+export declare const ExpandedMenuItem: ({ item, expanded, handleExpandClick, active }: Props) => JSX.Element;
 export {};
