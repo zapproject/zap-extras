@@ -14,7 +14,8 @@
     "build:css": "gulp build",
     "build:no-types": "run-p build:js build:css",
     "build": "run-p build:types build:js build:css",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o storybook"
   },
   "peerDependencies": {
     "react": "^16.8.6",
